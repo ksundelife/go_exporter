@@ -36,7 +36,7 @@ func main() {
 
     http.Handle("/metrics", promhttp.Handler())
     log.Fatal(http.ListenAndServe(":8082", nil))
-    fmt.Println("Hello world!")
+
     cm := make(map[string]string)
     cm[api.ENDPOINT] = "http://192.168.0.118:2633/RPC2"
     cm[api.USERID] = "oneadmin"
